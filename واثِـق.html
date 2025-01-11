@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+  <!-- رابط الخط من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* تطبيق الخطوط على كافة العناصر */
+    body, input, button, h1 {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+    }
+
+    /* إعدادات الخطوط والألوان الأساسية */
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffffff, #f5f5f5);
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/white_diamond.png'); /* نقوش خفيفة */
+      background-size: 150px 150px; /* تكبير النقوش بحيث تكون خفيفة */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      padding: 10px; /* لضمان المسافة حول المحتوى */
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; /* المسافة بين الشعار والنموذج */
+    }
+
+    .logo {
+      width: 40px; /* حجم الشعار */
+      height: 40px; /* حجم الشعار */
+      background-color: #007bff; /* اللون */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      color: #007bff; /* نفس لون الشعار */
+      font-weight: bold;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px; /* الحد الأقصى للعرض */
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .login-container h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .login-container form {
+      margin-top: 20px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .login-container input:focus {
+      border-color: #007bff;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px 15px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+    .login-container .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* استجابة للأجهزة الصغيرة */
+    @media (max-width: 768px) {
+      .logo-container {
+        margin-bottom: 15px;
+      }
+
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+
+      .login-container {
+        padding: 30px 20px;
+        width: 90%; /* توسيع العرض في الشاشات الصغيرة */
+      }
+
+      .login-container h1 {
+        font-size: 20px;
+      }
+
+      .login-container input {
+        font-size: 12px;
+        padding: 10px;
+      }
+
+      .login-container button {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .login-container .footer {
+        font-size: 10px;
+      }
+    }
+
+    /* استجابة للأجهزة التي تقل عن 480px */
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .login-container h1 {
+        font-size: 18px;
+      }
+
+      .login-container input {
+        font-size: 12px;
+        padding: 8px;
+      }
+
+      .login-container button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .login-container .footer {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <!-- الشعار والنص -->
+    <div class="logo">W</div>
+    <span class="logo-text">واثق محمد</span>
+  </div>
+  <div class="login-container">
+    <h1>تسجيل الدخول</h1>
+    <form>
+      <input type="text" placeholder="البريد الإلكتروني أو اسم المستخدم" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+    <a href="#">نسيت كلمة المرور؟</a>
+    <div class="footer">
+      ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a>
+    </div>
+  </div>
+</body>
+</html>
